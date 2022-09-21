@@ -1,4 +1,2 @@
-function getElement(){
-    element = document.querySelector('#shopB');
-    console.log('選ばれたのは' + element.textContent +'でした');
-}
+let list = document.getElementsByClassName("pull-down-list")
+console.log(lists)
