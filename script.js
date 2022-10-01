@@ -3,22 +3,22 @@ let list = document.getElementsByClassName("pull-down-list")
 window.addEventListener('load', function(){
   const pullDownButton =  document.getElementById("lists")
   pullDownButton.addEventListener('mouseover', function(){
-    console.log("乗る")
+    pullDownButton.setAttribute("style", "background-color:blue;")
   })
 })
 
 window.addEventListener('load', function(){
     const pullDownButton =  document.getElementById("lists")
     pullDownButton.addEventListener('mouseout', function(){
-      console.log("外れる")
+      pullDownButton.removeAttribute("style", "background-color:red;")
     })
 })
 
   window.addEventListener('load', function(){
     const pullDownButton =  document.getElementById("lists")
     pullDownButton.addEventListener('click', function(){
-      console.log("クリック")
+      pullDownButton.setAttribute("style", "background-color:green;")
     })
 })
-  
+
   
