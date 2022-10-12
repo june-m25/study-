@@ -21,8 +21,11 @@ window.addEventListener('load', function(){
     })
 })
 
+function pullDown() {
 const pullDownButton = document.getElementById("lists")
 const pullDownParents = document.getElementById("pull-down")
+const pullDownChild = document.querySelectorAll(".pull-down-list")
+const currenlist = document.getElementById("current-list")
 pullDownButton.addEventListener('click', function() {
   if (pullDownParents.getAttribute("style") == "display:block;"){ 
     pullDownParents.removeAttribute("style", "display:block;")
@@ -30,4 +33,12 @@ pullDownButton.addEventListener('click', function() {
     pullDownParents.setAttribute("style", "display:block;")
   }
 })
-  
+pullDownChild.forEach(function(list) {
+  list.addEventListener('click', function() {
+    const value = list.innerHTML
+    currenlist.innerHTML = value
+    console.log(value)
+  })
+})
+}
+window.addEventListener('load', pullDown)
